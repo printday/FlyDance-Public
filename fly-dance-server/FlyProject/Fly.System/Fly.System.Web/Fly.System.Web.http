@@ -1,0 +1,6 @@
+@Fly.System.Web_HostAddress = http://localhost:5197
+
+GET {{Fly.System.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,30 @@
+{
+  "profiles": {
+    "Fly.System": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "FlySystemWeb",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:9001;"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "FlySystemWeb",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:58239/",
+      "sslPort": 44378
+    }
+  }
+}

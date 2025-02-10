@@ -1,0 +1,161 @@
+/* 由HUAJU建立的FlyDance自定义样式 */
+:root {
+  /* 靛蓝色 */
+  --fly-indigo: #2c3e50;
+  /* 白 */
+  --fly-color-white: #ffffff;
+  --fly-color-white-soft: #f8f8f8;
+  --fly-color-white-mute: #f2f2f2;
+  /* 黑 */
+  --fly-color-black: #181818;
+  --fly-color-black-soft: #222222;
+  --fly-color-black-mute: #282828;
+  /* 间隔色 */
+  --fly-divider-light-1: rgba(60, 60, 60, 0.29);
+  --fly-divider-light-2: rgba(60, 60, 60, 0.12);
+  --fly-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --fly-divider-dark-2: rgba(84, 84, 84, 0.48);
+  /* 文本色 */
+  --fly-text-light-1: var(--fly-indigo);
+  --fly-text-light-2: rgba(60, 60, 60, 0.66);
+  --fly-text-dark-1: var(--fly-color-white);
+  --fly-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* 系统使用规范（不需使用由HUAJU建立的调色板，规范中已提供调色完的样式，特殊情况可使用调色板） */
+
+/*亮色系*/
+:root {
+  --fly-background-color: var(--fly-color-white);
+  --fly-background-color-soft: var(--fly-color-white);
+  --fly-background-color-mute: var(--fly-color-white);
+
+  --fly-border-color: var(--fly-divider-light-2);
+  --fly-border-hover-color: var(--fly-divider-light-1);
+
+  --fly-text-color: var(--fly-text-light-1);
+
+  --fly-home-backgroud-color: var(--fly-color-white-mute);
+}
+
+/*暗色系*/
+:root {
+  --fly-background-color-dark: var(--fly-color-black);
+  --fly-background-color-soft-dark: var(--fly-color-black);
+  --fly-background-color-mute-dark: var(--fly-color-black);
+
+  --fly-border-color-dark: var(--fly-divider-dark-2);
+  --fly-border-hover-color-dark: var(--fly-divider-dark-1);
+
+  --fly-text-color-dark: var(--fly-text-dark-1);
+
+  --fly-home-backgroud-color-dark: var(--fly-color-black-mute);
+}
+
+/* 跟随系统（选择暗色覆盖） */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fly-background-color: var(--fly-color-black);
+    --fly-background-color-soft: var(--fly-color-black);
+    --fly-background-color-mute: var(--fly-color-black);
+
+    --fly-border-color: var(--fly-divider-dark-2);
+    --fly-border-hover-color: var(--fly-divider-dark-1);
+
+    --fly-text-color: var(--fly-text-dark-1);
+
+    --fly-home-backgroud-color: var(--fly-color-black-mute);
+  }
+}
+
+/* 新自定义样式，用于辅助Antd的全局样式 */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 针对一般移动设备 */
+:root {
+  /* 通用值 */
+  --item-label-size: 1rem;
+  --home-view-padding-about: 0.5rem;
+  --home-view-padding-updown: 0.3rem;
+  /* 根据设备更改的值 */
+  --max-width: 500px;
+  --app-width: 100vw;
+  --app-height: 100vh;
+  --app-title-font-size: 2rem;
+}
+
+#app {
+  font-weight: normal;
+  border-radius: 10px;
+}
+
+/* 针对移动设备 */
+@media (max-width: 500px) {
+  :root {
+    --max-width: 500px;
+    --app-width: 100vw;
+    --app-height: 100vh;
+    --app-title-font-size: 1.5rem;
+    --mobile-item-label-size: 2rem;
+  }
+  #app {
+    min-width: 200px;
+    max-width: var(--max-width);
+    max-height: var(--app-height);
+  }
+}
+
+/* 针对平板设备 */
+@media (min-width: 501px) and (max-width: 1280px) {
+  :root {
+    --max-width: 1280px;
+    --app-width: 100vw;
+    --app-height: 100vh;
+    --app-title-font-size: 2rem;
+  }
+  #app {
+    min-width: 501px;
+    max-width: var(--max-width);
+    padding: 0 0;
+    max-height: var(--app-height);
+  }
+}
+
+/* 针对桌面设备 */
+@media (min-width: 1281px) {
+  :root {
+    --max-width: 1920px;
+    --app-width: calc(100vw - 16rem);
+    --app-height: calc(100vh - 4rem);
+    --app-title-font-size: 2rem;
+  }
+  #app {
+    min-width: 1280px;
+    max-width: var(--max-width);
+    max-height: var(--app-height);
+    margin: 0 5rem;
+    padding: 0 3rem;
+  }
+}
+
+/* 部分全局可用css */
+.form-item-center {
+  text-align: center;
+}
+
+.form-item-right {
+  text-align: right;
+}
+
+/* 强制移除外边距(对抗antdv的原生css) */
+.ant-tabs-nav {
+  margin-bottom: 0 !important;
+}

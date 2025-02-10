@@ -1,0 +1,28 @@
+.head-show {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #000000, #505050);
+}
+
+.head-title {
+  width: var(--app-width);
+  height: calc(var(--app-height) / 15);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.head-label {
+  color: #ffffff;
+  font-size: var(--app-title-font-size);
+}
+
+.go-login-button {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}
+
+.dashboard-item-label {
+  font-size: var(--item-label-size);
+}
